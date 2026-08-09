@@ -1,3 +1,5 @@
+USE hotel_db;
+
 INSERT INTO Customer (customer_id, full_name, email, phone, id_number, nationality) VALUES
 (1, 'Kwame Mensah', 'kwame.mensah@gmail.com', '+233241234567', 'GHA-712839401-2', 'Ghanaian'),
 (2, 'Abena Osei', 'abena.osei@yahoo.com', '+233209876543', 'GHA-829104820-5', 'Ghanaian'),
@@ -126,23 +128,32 @@ INSERT INTO Room (room_id, room_number, floor_no, status, room_type_id) VALUES
 (124, '504', '5th', 'Occupied', 4),
 (125, '505', '5th', 'Available', 6);
 
-INSERT INTO Payment (payment_id, invoice_id, payment_date, amount, method) VALUES
-(1, 1, '2026-01-13 10:00:00', 571.00, 'Credit Card'),
-(2, 2, '2026-01-18 11:30:00', 1488.00, 'Mobile Money'),
-(3, 3, '2026-02-05 09:15:00', 1982.00, 'Bank Transfer'),
-(4, 4, '2026-02-12 14:20:00', 1340.00, 'Cash'),
-(5, 5, '2026-03-04 16:45:00', 2685.00, 'Credit Card'),
-(6, 6, '2026-03-15 12:10:00', 5110.00, 'Bank Transfer'),
-(7, 7, '2026-04-08 10:30:00', 2977.00, 'Mobile Money'),
-(8, 8, '2026-04-14 11:00:00', 825.00, 'Cash'),
-(9, 9, '2026-05-03 15:00:00', 1535.00, 'Credit Card'),
-(10, 10, '2026-05-14 09:45:00', 2652.00, 'Mobile Money'),
-(11, 11, '2026-06-05 14:15:00', 3325.00, 'Bank Transfer'),
-(12, 12, '2026-06-12 16:30:00', 2668.00, 'Credit Card'),
-(13, 13, '2026-07-06 11:10:00', 3325.00, 'Bank Transfer'),
-(14, 14, '2026-07-18 10:00:00', 2578.00, 'Credit Card'),
-(15, 16, '2026-08-08 15:30:00', 1000.00, 'Mobile Money'),
-(16, 22, '2026-08-11 11:30:00', 1920.00, 'Bank Transfer');
+INSERT INTO Reservation (reservation_id, customer_id, staff_id, check_in_date, check_out_date, num_guests, status) VALUES
+(1, 1, 1, '2026-01-10', '2026-01-13', 1, 'Completed'),
+(2, 2, 2, '2026-01-15', '2026-01-18', 2, 'Completed'),
+(3, 3, 1, '2026-02-01', '2026-02-05', 2, 'Completed'),
+(4, 4, 3, '2026-02-10', '2026-02-12', 2, 'Completed'),
+(5, 5, 2, '2026-03-01', '2026-03-04', 3, 'Completed'),
+(6, 6, 1, '2026-03-10', '2026-03-15', 4, 'Completed'),
+(7, 7, 3, '2026-04-05', '2026-04-08', 2, 'Completed'),
+(8, 8, 2, '2026-04-12', '2026-04-14', 2, 'Completed'),
+(9, 9, 1, '2026-05-01', '2026-05-03', 1, 'Completed'),
+(10, 10, 3, '2026-05-10', '2026-05-14', 3, 'Completed'),
+(11, 11, 2, '2026-06-01', '2026-06-05', 1, 'Completed'),
+(12, 12, 1, '2026-06-10', '2026-06-12', 2, 'Completed'),
+(13, 13, 3, '2026-07-01', '2026-07-06', 2, 'Completed'),
+(14, 14, 2, '2026-07-15', '2026-07-18', 2, 'Completed'),
+(15, 15, 1, '2026-08-01', '2026-08-05', 2, 'Checked_In'),
+(16, 16, 3, '2026-08-04', '2026-08-08', 2, 'Checked_In'),
+(17, 17, 2, '2026-08-06', '2026-08-10', 3, 'Checked_In'),
+(18, 18, 1, '2026-08-12', '2026-08-15', 2, 'Confirmed'),
+(19, 19, 3, '2026-08-20', '2026-08-25', 4, 'Confirmed'),
+(20, 20, 2, '2026-09-01', '2026-09-04', 1, 'Confirmed'),
+(21, 21, 1, '2026-08-05', '2026-08-09', 2, 'Checked_In'),
+(22, 22, 3, '2026-08-07', '2026-08-11', 3, 'Checked_In'),
+(23, 23, 2, '2026-08-15', '2026-08-18', 1, 'Confirmed'),
+(24, 24, 1, '2026-08-22', '2026-08-26', 2, 'Confirmed'),
+(25, 25, 3, '2026-09-10', '2026-09-14', 4, 'Cancelled');
 
 INSERT INTO Reservation_Room (reservation_id, room_id, rate_applied) VALUES
 (1, 101, 120.00),
@@ -307,16 +318,7 @@ INSERT INTO Payment (payment_id, invoice_id, payment_date, amount, method) VALUE
 (13, 13, '2026-07-06 11:10:00', 3325.00, 'Bank Transfer'),
 (14, 14, '2026-07-18 10:00:00', 2578.00, 'Credit Card'),
 (15, 16, '2026-08-08 15:30:00', 1000.00, 'Mobile Money'),
-(16, 22, '2026-08-11 09:30:00', 1920.00, 'Bank Transfer'),
-(17, 1, '2026-01-13 10:05:00', 571.00, 'Credit Card'),
-(18, 2, '2026-01-18 11:35:00', 1488.00, 'Mobile Money'),
-(19, 3, '2026-02-05 09:20:00', 1982.00, 'Bank Transfer'),
-(20, 5, '2026-03-04 16:50:00', 2685.00, 'Credit Card'),
-(21, 7, '2026-04-08 10:35:00', 2977.00, 'Mobile Money'),
-(22, 11, '2026-06-05 14:20:00', 3325.00, 'Bank Transfer'),
-(23, 12, '2026-06-12 16:35:00', 2668.00, 'Credit Card'),
-(24, 13, '2026-07-06 11:15:00', 3325.00, 'Bank Transfer'),
-(25, 14, '2026-07-18 10:05:00', 2578.00, 'Credit Card');
+(16, 22, '2026-08-11 11:30:00', 1920.00, 'Bank Transfer');
 
 INSERT INTO Customer_Feedback (feedback_id, customer_id, reservation_id, rating, comments, date_submitted) VALUES
 (1, 1, 1, 5, 'Exceptional room service and seamless check-in experience.', '2026-01-14 09:00:00'),
