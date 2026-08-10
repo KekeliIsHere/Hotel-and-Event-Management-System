@@ -94,3 +94,5 @@ stamp last_login. Only Admin can insert new accounts.
 Passwords here are placeholders. We should Change them before the demonstration and
 keep the real ones out of GitHub.
 */
+/* Testing */
+SHOW GRANTS FOR 'hotel_app_restaurant'@'localhost';
