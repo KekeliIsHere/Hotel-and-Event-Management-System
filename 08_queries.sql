@@ -220,6 +220,5 @@ ORDER BY cal.stay_date;
 Recursive CTE builds every date in August, since no calendar table exists.
 The anchor row is the first of the month and each pass adds a day.
 
-Without the generated dates, days with no bookings would be missing rather
-than showing zero.
+Without the generated dates, days with no bookings would be missing instead of showing zero.
 */
