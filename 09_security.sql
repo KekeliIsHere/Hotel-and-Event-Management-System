@@ -96,3 +96,8 @@ keep the real ones out of GitHub.
 */
 /* Testing */
 SHOW GRANTS FOR 'hotel_app_restaurant'@'localhost';
+
+CREATE USER IF NOT EXISTS 'hotel_app_login'@'localhost' IDENTIFIED BY 'ChangeMe_Login1';
+GRANT SELECT, UPDATE ON hotel_db.App_User TO 'hotel_app_login'@'localhost';
+
+FLUSH PRIVILEGES;
